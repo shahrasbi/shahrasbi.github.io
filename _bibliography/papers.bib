@@ -1,0 +1,179 @@
+---
+---
+
+@string{STOC = {Proceedings of the ACM Symposium on Theory of Computing (STOC)}}
+@String{SODA = {Proceedings of the ACM-SIAM Symposium on Discrete Algorithms (SODA)}}
+@String{ICALP = {Proceedings of the International Conference on Automata, Languages, and Programming (ICALP)}}
+@String{ISIT = {Proceedings of the IEEE International Symposium on Information Theory (ISIT)}}
+
+@inproceedings{guruswami2019optimally,
+  author    = {Venkatesan Guruswami and
+               Bernhard Haeupler and
+               Amirbehshad Shahrasbi},
+  title     = {Optimally Resilient Codes for List-Decoding from Insertions and Deletions},
+  booktitle = STOC,
+  pages     = {524--537},
+  year      = {2020},
+  abbr={STOC},
+  abstract={We give a complete answer to the following basic question: "What is the maximal fraction of deletions or insertions tolerable by q-ary list-decodable codes with non-vanishing information rate?"<br>
+This question has been open even for binary codes, including the restriction to the binary insertion-only setting, where the best known results was that a \(\gamma\leq 0.707\)&nbsp;fraction of insertions is tolerable by some binary code family.<br>
+For any desired \(\varepsilon>0\), we construct a family of binary codes of positive rate which can be efficiently list-decoded from any combination of \(\gamma\)&nbsp;fraction of insertions and \(\delta\)&nbsp;fraction of deletions as long as \(\gamma+2\delta\leq 1-\varepsilon\). On the other hand, for any \(\gamma, \delta\)&nbsp;with \(\gamma+2\delta=1\)&nbsp;list-decoding is impossible. Our result thus precisely characterizes the feasibility region of binary list-decodable codes for insertions and deletions.<br>
+We further generalize our result to codes over any finite alphabet of size \(q\). Surprisingly, our work reveals that the feasibility region for \(q>2\)&nbsp;is not the natural generalization of the binary bound above. We provide tight upper and lower bounds that precisely pin down the feasibility region, which turns out to have a \((q-1\))-piece-wise linear boundary whose \(q\)&nbsp;corner-points lie on a quadratic curve.<br>
+The main technical work in our results is proving the existence of code families of sufficiently large size with good list-decoding properties for any combination of \(\delta, \gamma\)&nbsp;within the claimed feasibility region. We achieve this via an intricate analysis of codes introduced by [Bukh, Ma; SIAM J. Discrete Math; 2014]. Finally we give a simple yet powerful concatenation scheme for list-decodable insertion-deletion codes which transforms any such (non-efficient) code family (with vanishing information rate) into an efficiently decodable code family with constant rate.},
+  arXiv={1909.10683}
+}
+
+@inproceedings{haeupler2019near,
+  title={Near-Linear Time Insertion-Deletion Codes and (1+\(\varepsilon\))-Approximating Edit Distance via Indexing},
+  author={Haeupler, Bernhard and Rubinstein, Aviad and Shahrasbi, Amirbehshad},
+  booktitle=STOC,
+  pages     = {697--708},
+  year={2019},
+  abbr={STOC},
+  abstract={We introduce <I>fast-decodable indexing schemes for edit distance</I> which can be used to speed up edit distance computations to near-linear time if one of the strings is indexed by an indexing string \(I\). In particular, for every length \(n\)&nbsp;and every \(\varepsilon >0\), one can in near linear time construct a string \(I \in \Sigma'^n\)&nbsp;with \(|\Sigma'| = O_{\varepsilon}(1)\), such that, indexing any string \(S \in \Sigma^n\), symbol-by-symbol, with \(I\)&nbsp;results in a string \(S' \in \Sigma'^\prime\)<sup>\(n\)</sup>&nbsp;where \(\Sigma'^\prime = \Sigma \times \Sigma'\)&nbsp;for which edit distance computations are easy, i.e., one can compute a 
+\((1+\varepsilon)\)-approximation of the edit distance between \(S'\)&nbsp;and any other string in \(O(n\cdot polylog(n))\)&nbsp;time.
+
+Our indexing schemes can be used to improve the decoding complexity of state-of-the-art error correcting codes for insertion and deletions. In particular, they lead to near-linear time decoding algorithms for the insertion-deletion codes of [Haeupler, Shahrasbi; STOC '17] and list-decodable insertion-deletion codes of [Haeupler, Shahrasbi, Sudan; ICALP `18]. Interestingly, the latter codes are a crucial ingredient in the construction of fast-decodable indexing schemes.},
+  arXiv={1810.11863}
+}
+
+@inproceedings{cheng2018synchronization,
+  title={Synchronization Strings: Highly Efficient Deterministic Constructions over Small Alphabets},
+  author={Cheng, Kuan and Haeupler, Bernhard and Li, Xin and Shahrasbi, Amirbehshad and Wu, Ke},
+  booktitle=SODA,
+pages     = {2185--2204},
+  year={2019},
+  abbr={SODA},
+  abstract={Synchronization strings are recently introduced by Haeupler and Shahrasbi [STOC 2017] in the study of codes for correcting insertion and deletion errors (insdel codes). A synchronization string is an encoding of the indices of the symbols in a string, and together with an appropriate decoding algorithm it can transform insertion and deletion errors into standard symbol erasures and corruptions. This reduces the problem of constructing insdel codes to the problem of constructing standard error correcting codes, which is much better understood. Besides this, synchronization strings are also useful in other applications such as synchronization sequences and interactive coding schemes. For all such applications, synchronization strings are desired to be over alphabets that are as small as possible, since a larger alphabet size corresponds to more redundant information added.<br>
+
+											Haeupler and Shahrasbi [STOC 2017] showed that for any  parameter \(\varepsilon>0\), synchronization strings of arbitrary length exist over an alphabet whose size depends only on \(\varepsilon\). Specifically, Haeupler and Shahrasbi [STOC 2017] obtained an alphabet size of \(O(\varepsilon\)<sup>\(-4\)</sup>\()\), which left an open question on where the minimal size of such alphabets lies between \(\Omega(\varepsilon\)<sup>\(-1\)</sup>\()\)&nbsp;and \(O(\varepsilon\)<sup>\(-4\)</sup>\()\). In this work, we partially bridge this gap by providing an improved lower bound of \(\Omega(\varepsilon\)<sup>\(-3/2\)</sup>\()\), and an improved upper bound of \(O(\varepsilon\)<sup>\(-2\)</sup>\()\). We also provide fast explicit constructions of synchronization strings over small alphabets.<br>
+
+Further, along the lines of previous work on similar combinatorial objects, we study the extremal question of the smallest possible alphabet size over which synchronization strings can exist for some constant \(\varepsilon < 1\). We show that one can construct \(\varepsilon\)-synchronization strings over alphabets of size four while no such string exists over binary alphabets. This reduces the extremal question to whether synchronization strings exist over ternary alphabets.},
+arXiv={1803.03530}
+}
+
+
+@inproceedings{haeupler2018synchronization4,
+  title={Synchronization Strings: List Decoding for Insertions and Deletions},
+  author={Haeupler, Bernhard and Shahrasbi, Amirbehshad and Sudan, Madhu},
+  booktitle=ICALP,
+  year={2018},
+  abbr={ICALP},
+  abstract={We study codes that are list-decodable under insertions and deletions ("insdel codes"). Specifically, we consider the setting where, given a codeword \(x\)&nbsp;of length \(n\)&nbsp;over some finite alphabet \(\Sigma\)&nbsp;of size \(q\), \(\delta n\)&nbsp;codeword symbols may be adversarially deleted and \(\gamma\cdot n\) symbols may be adversarially inserted to yield a corrupted word \(w\). A code is said to be list-decodable if there is an (efficient) algorithm that, given \(w\), reports a small list of codewords that include the original codeword \(x\). Given \(\delta\)&nbsp;and \(\gamma\)&nbsp;we study what is the rate \(R\)&nbsp;for which there exists a constant \(q\)&nbsp;and list size \(L\)&nbsp;such that there exist codes of rate \(R\)&nbsp;correcting \(\delta\)-fraction insertions and \(\gamma\)-fraction deletions while reporting lists of size at most \(L\).<br>
+
+
+											Using the concept of <I>synchronization strings</I>, introduced by the first two authors [Proc. STOC 2017], we show some surprising results. We show that for every \(0\leq \delta < 1\), every \(0 \leq \gamma < \infty\)&nbsp;and every \(\epsilon > 0\)&nbsp;there exists codes of rate \(1 - \delta - \epsilon\)&nbsp;and constant alphabet (so \(q = O_{\delta,\gamma,\epsilon}(1)\)) and sub-polynomial list sizes. Furthermore our codes are accompanied by efficient (polynomial time) decoding algorithms. We stress that the fraction of insertions can be arbitrarily large (more than 100\%), and the rate is independent of this parameter. We also prove several tight bounds on the parameters of list-decodable insdel codes. In particular we show that the alphabet size of insdel codes needs to be exponentially large in \(\epsilon^{-}\)\(^{1}\), where \(\epsilon\)&nbsp;is the gap to capacity above. Our result even applies to settings where the unique-decoding capacity equals the list-decoding  capacity and when it does so, it shows that the alphabet size needs to be exponentially large in the gap to capacity. This is sharp contrast to the Hamming error model where alphabet size polynomial in \(\epsilon^{-}\)\(^{1}\)&nbsp;suffices for unique decoding. This lower bound also shows that the exponential dependence on the alphabet size in previous works that constructed insdel codes is actually necessary! <br>
+
+Our result sheds light on the remarkable asymmetry between the impact of insertions and deletions from the point of view of error-correction: Whereas deletions cost in the rate of the code, insertion costs are borne by the adversary and not the code! Our results also highlight the dominance of the model of insertions and deletions over the Hamming model: A Hamming error is equal to one insertion and one deletion (at the same location). Thus the effect of \(\delta\)-fraction Hamming errors can be simulated by \(\delta\)-fraction of deletions and \(\delta\)-fraction of insertions &mdash; but insdel codes can deal with much more insertions without loss in rate (though at the price of higher alphabet size).},
+  arXiv={1802.08663}
+}
+
+@inproceedings{haeupler2017synchronization3,
+  title={Synchronization Strings: Explicit Constructions, Local Decoding, and Applications},
+  author={Haeupler, Bernhard and Shahrasbi, Amirbehshad},
+  booktitle=STOC,
+  pages     = {841--854},
+  year={2018},
+  abbr={STOC},
+  abstract={This paper gives new results for <b>synchronization strings</b>, a powerful combinatorial object that allows to efficiently deal with insertions and deletions in various communication problems:
+<ul style="list-style-type:disc" align=left>
+	<li>We give a <b>deterministic, linear time synchronization string construction</b>, improving over an \(O(n^5)\)&nbsp;time randomized construction. Independently of this work, a deterministic \(O(n \log^2 \log n)\)&nbsp;time construction proposed by Cheng, Li, and Wu.</li>
+	<li>We give a <b>deterministic construction of an infinite synchronization string</b> which outputs the first \(n\)&nbsp;symbols in \(O(n)\)&nbsp;time. Previously it was not known whether such a string was computable.</li>
+	<li> Both synchronization string constructions are <b>highly explicit</b>, i.e., the \(i\)th symbol can be deterministically computed in \(O(\log i)\)&nbsp;time. </li>
+	<li> This paper also introduces a generalized notion we call <b>long-distance synchronization strings</b>. Such strings <b>allow for local and very fast decoding</b>. In particular, only \(O(\log^3 n)\)&nbsp;time and access to logarithmically many symbols is required to decode any index.</li>
+</ul>
+The paper also provides several applications for these improved synchronization strings:
+<ul style="list-style-type:disc" align=left>
+	<li>For any \(\delta < 1\)&nbsp;and \(\epsilon > 0\)&nbsp;we provide an <b>insdel error correcting block code</b> with rate \(1 - \delta - \epsilon\)&nbsp;which can correct any \(O(\delta)\)&nbsp;fraction of insertion and deletion errors in \(O(n \log^3 n)\)&nbsp;time. This <b>near linear computational efficiency</b> is surprising given that we do not even know how to compute the (edit) distance between the decoding input and output in sub-quadratic time.</li>
+	<li>We show that local decodability implies that error correcting codes constructed with long-distance synchronization strings can not only efficiently recover from \(\delta\)&nbsp;fraction of insdel errors but, similar to [Schulman, Zuckerman; TransInf'99], also from any \(O(\delta / \log n)\)&nbsp;fraction of <b>block transpositions and block replications</b>. These block corruptions allow arbitrarily long substrings to be swapped or replicated anywhere.</li>
+	<li>We show that highly explicitness and local decoding allow for <b>infinite channel simulations with   exponentially smaller memory and decoding time requirements</b>. These simulations can then be used to give the first <b>near linear time interactive coding scheme for insdel errors</b>, similar to the result of [Brakerski, Naor; SODA'13] for Hamming errors. 
+</li></ul>},
+  arXiv={1710.09795}
+}
+
+@inproceedings{haeupler2017synchronization2,
+  author={Haeupler, Bernhard and Shahrasbi, Amirbehshad and Vitercik, Ellen},
+  title     = {Synchronization Strings: Channel Simulations and Interactive Coding for Insertions and Deletions},
+  booktitle = ICALP,
+  pages     = {75:1--75:14},
+  year      = {2018},
+  abbr={ICALP},
+  abstract={We present many new results related to reliable (interactive) communication
+over insertion-deletion channels. Synchronization errors, such as insertions
+and deletions, strictly generalize the usual symbol corruption errors and are
+much harder to protect against.
+<br />We show how to hide the complications of synchronization errors in many
+applications by introducing very general channel simulations which efficiently
+transform an insertion-deletion channel into a regular symbol corruption
+channel with an error rate larger by a constant factor and a slightly smaller
+alphabet. We generalize synchronization string based methods which were
+recently introduced as a tool to design essentially optimal error correcting
+codes for insertion-deletion channels. Our channel simulations depend on the
+fact that, at the cost of increasing the error rate by a constant factor,
+synchronization strings can be decoded in a streaming manner that preserves
+linearity of time. We also provide a lower bound showing that this constant
+factor cannot be improved to \(1+\epsilon\), in contrast to what is achievable
+for error correcting codes. Our channel simulations drastically generalize the
+applicability of synchronization strings.
+<br />We provide new interactive coding schemes which simulate any interactive
+two-party protocol over an insertion-deletion channel. Our results improve over
+the interactive coding scheme of Braverman et al. which achieves a small
+constant rate and requires exponential time computations. We provide the first
+computationally efficient interactive coding schemes for synchronization
+errors, the first coding scheme with a rate approaching one for small noise
+rates, and also improve over the maximal tolerable error rate. We also show
+tight connections between synchronization strings and edit-distance tree codes
+which allow us to transfer results from tree codes directly to edit-distance
+tree codes.},
+  arXiv={1707.04233}
+}
+
+@inproceedings{haeupler2017synchronization,
+  title={Synchronization Strings: Codes for Insertions and Deletions Approaching the {Singleton} Bound},
+  abstract={We introduce <i>synchronization strings</i> as a novel way of efficiently dealing
+with synchronization errors, i.e., insertions and deletions. Synchronization
+errors are strictly more general and much harder to deal with than commonly
+considered half-errors, i.e., symbol corruptions and erasures. For every
+\(\epsilon&gt;0\), synchronization strings allow to index a sequence with an
+\(\epsilon\)<sup>\({-O(1)}\)</sup>&nbsp;size alphabet such that one can efficiently transform \(k\)&nbsp;
+ synchronization errors into \((1+\epsilon)k\)&nbsp;half-errors. This powerful new
+technique has many applications. In this paper, we focus on designing insdel
+codes, i.e., error correcting block codes (ECCs) for insertion deletion
+channels.
+<br />While ECCs for both half-errors and synchronization errors have been
+intensely studied, the later has largely resisted progress. Indeed, it took
+until 1999 for the first insdel codes with constant rate, constant distance,
+and constant alphabet size to be constructed by Schulman and Zuckerman. Insdel
+codes for asymptotically large or small noise rates were given in 2016 by
+Guruswami et al. but these codes are still polynomially far from the optimal
+rate-distance tradeoff. This makes the understanding of insdel codes up to this
+work equivalent to what was known for regular ECCs after Forney introduced
+concatenated codes in his doctoral thesis 50 years ago.
+<br />A direct application of our synchronization strings based indexing method
+gives a simple black-box construction which transforms any ECC into an equally
+efficient insdel code with a slightly larger alphabet size. This instantly
+transfers much of the highly developed understanding for regular ECCs over
+large constant alphabets into the realm of insdel codes. Most notably, we
+obtain efficient insdel codes which get arbitrarily close to the optimal
+rate-distance tradeoff given by the Singleton bound for the complete noise
+spectrum.},
+  author={Haeupler, Bernhard and Shahrasbi, Amirbehshad},
+  booktitle=STOC,
+  pages     = {33--46},
+  year={2017},
+  abbr={STOC},
+  arXiv={1704.00807}
+}
+
+@inproceedings{tahmasbi2014critical,
+  title={Critical Graphs in Index Coding},
+  author={Tahmasbi, Mehrdad and Shahrasbi, Amirbehshad and Gohari, Amin},
+  booktitle={IEEE International Symposium on Information Theory (ISIT)},
+  pages={281--285},
+  year={2014},
+  organization={IEEE},
+  abbr={ISIT},
+  abstract={In this paper we define critical graphs as minimal graphs that support a given set of rates for the index coding problem, and study them for both the one-shot and asymptotic setups. For the case of equal rates, we find the critical graph with minimum number of edges for both one-shot and asymptotic cases. For the general case of possibly distinct rates, we show that for one-shot and asymptotic linear index coding, as well as asymptotic non-linear index coding, each critical graph is a union of disjoint strongly connected subgraphs (USCS). On the other hand, we identify a non-USCS critical graph for a one-shot non-linear index coding problem. Next, we identify a few graph structures that are critical. We also generalize some of our results to the groupcast problem. In addition, we show that the capacity region of the index coding is additive for union of disjoint graphs.},
+  arXiv={1312.0132}
+}
+

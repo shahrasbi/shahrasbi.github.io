@@ -1,0 +1,35 @@
+---
+---
+
+
+@phdthesis{ShahrasbiThesis,
+  title={Coding for Synchronization Errors},
+  author={Shahrasbi, Amirbehshad},
+  year={2020},
+  school={Carnegie Mellon University},
+  abbr={Ph.D. Thesis},
+  abstract={Coding theory is the study of algorithms and techniques that facilitate reliable information transmission over noisy mediums, most notably through combinatorial objects called error-correcting codes. Following the inspiring works of Shannon and Hamming, a sophisticated and extensive body of research on error-correcting codes has led to a deep and detailed theoretical understanding as well as practical implementations that have helped fuel the digital revolution. Error-correcting codes can be found in essentially all modern communication, computation, and data storage systems. While being remarkably successful in understanding the theoretical limits and trade-offs of reliable communication under errors and erasures, the coding theory literature significantly lags behind when it comes to overcoming errors that concern the timing of communications. In particular, the study of correcting synchronization errors, i.e., symbol insertions and deletions, while initially introduced by Levenshtein in the 60s, has significantly fallen behind our highly sophisticated knowledge of codes for Hamming-type errors.<br>
+
+This thesis investigates coding against synchronization errors under a variety of models and attempts to understand trade-offs between different qualities of interest in respective coding schemes such as rate, distance, and algorithmic qualities of the code. Most of the presented results rely on synchronization strings, simple yet powerful pseudorandom objects introduced in this work that have proven to be very effective solutions for coping with synchronization errors in various settings.<br>
+
+Through indexing with strings that satisfy certain pseudo-random properties, we provide synchronization codes that achieve near-optimal rate-distance trade-off. We further attempt to provide constructions that enable fast encoding/decoding procedures. We study the same problem under the list-decoding regime, where the decoder is expected to provide a short list of codewords that is guaranteed to contain the sent message. We will also try to better understand the fundamental limits of list-decoding for synchronization errors such as the list-decoding capacity or maximal error resilience for list-decodable synchronization codes. This thesis furthermore studies synchronization strings and other related pseudo-random string properties as combinatorial objects that are of independent interest. Such combinatorial objects will be used to extend some of our techniques to alternative communication problems such as coding from block transposition errors or coding for interactive communication.},
+  pdf={Coding for Synchronization Errors.pdf}
+}
+
+@article{haeupler-list-dec-capacity2020,
+  title={Rate-Distance Trade-offs for List-Decodable Insertion-Deletion Codes},
+  author={Haeupler, Bernhard and Shahrasbi, Amirbehshad},
+  year={2020},
+  abstract={This paper presents general bounds on the highest achievable rate for list-decodable insertion-deletion codes. In particular, we give novel outer and inner bounds for the highest achievable communication rate of any insertion-deletion code that can be list-decoded from any \(\gamma\)&nbsp;fraction of insertions and any \(\delta\)&nbsp;fraction of deletions. Our bounds simultaneously generalize the known bounds for the previously studied special cases of insertion-only, deletion-only, and zero-rate and correct other bounds reported for the general case.},
+  arXiv={2009.13307}
+}
+
+@article{Review Paper,
+  title={Synchronization Strings and Codes for Insertions and Deletions -- a Survey},
+  author={Haeupler, Bernhard and Shahrasbi, Amirbehshad},
+  year={2020},
+  abstract={Already in the 1960s, Levenshtein and others studied error-correcting codes that protect against synchronization errors, such as symbol insertions and deletions. However, despite significant efforts, progress on designing such codes has been lagging until recently, particularly compared to the detailed understanding of error-correcting codes for symbol substitution or erasure errors. This paper surveys the recent progress in designing efficient error-correcting codes over finite alphabets that can correct a constant fraction of worst-case insertions and deletions. <br>
+
+Most state-of-the-art results for such codes rely on synchronization strings, simple yet powerful pseudo-random objects that have proven to be very effective solutions for coping with synchronization errors in various settings. This survey also includes an overview of what is known about synchronization strings and discusses communication settings related to error-correcting codes in which synchronization strings have been applied.}
+}
+
